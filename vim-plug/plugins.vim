@@ -13,5 +13,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Undo history
 Plug 'mbbill/undotree'
+" Custom start screen
+Plug 'mhinz/vim-startify'
 
 call plug#end()

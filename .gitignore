@@ -2,3 +2,5 @@
 .netrwhist
 autoload/plugged/*
 undodir/*
+session
+
