@@ -7,6 +7,11 @@ nnoremap <Space> <Nop>
 nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<CR>
+" q in normal mode will delete the current buffer
+nnoremap <silent> q :bdelete<CR>
+
+" Alternate way to save
+nnoremap <silent> <C-s> :w<CR>
 
 " Use Esc less hopefully
 inoremap jk <Esc>
@@ -19,9 +24,9 @@ nnoremap <C-p> :Files<CR>
 nnoremap <leader>g :Rg <C-R>=expand("<cword>")<CR><CR>
 
 " Show undotree
-nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
-" Open a file tree, and resize
+" Open Netrw, and resize
 nnoremap <leader>v :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " Better window navigation
@@ -29,6 +34,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Move selected or current lines up and down
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
 " disable arrows in most modes
 noremap <Up> <Nop>
