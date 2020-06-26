@@ -6,5 +6,8 @@ let g:coc_global_extensions = [
       \'coc-prettier',
       \'coc-eslint',
       \'coc-styled-components',
-      \'coc-flow'
+      \'coc-flow',
+      \'coc-markdownlint',
+      \'coc-spell-checker',
+      \'coc-vimlsp'
       \]
