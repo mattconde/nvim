@@ -2,29 +2,14 @@
 let mapleader = " "
 nnoremap <Space> <Nop>
 
-" Simulate same TAB behavior in VSCode
-" TAB in general mode will move to text buffer
+" TAB will move to next buffer
 nnoremap <silent> <TAB> :bnext<CR>
-" SHIFT-TAB will go back
+" SHIFT-TAB will go to the previous buffer
 nnoremap <silent> <S-TAB> :bprevious<CR>
-" q in normal mode will delete the current buffer
-nnoremap <silent> q :bdelete<CR>
-
-" Alternate way to save
-nnoremap <silent> <C-s> :w<CR>
 
 " Use Esc less hopefully
 inoremap jk <Esc>
 inoremap kj <Esc>
-
-" Ctrl P use fzf :GFiles
-nnoremap <C-p> :Files<CR>
-
-" Shortcut for searching with RipGrep via fzf
-nnoremap <leader>g :Rg <C-R>=expand("<cword>")<CR><CR>
-
-" Show undotree
-nnoremap <leader>u :UndotreeToggle<CR>
 
 " Open Netrw, and resize
 nnoremap <leader>v :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
