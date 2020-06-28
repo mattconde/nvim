@@ -25,6 +25,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map[','] = [ ':e $MYVIMRC'                        , 'open init.vim' ]
 let g:which_key_map['.'] = [ ':Startify'                          , 'start screen' ]
+let g:which_key_map['%'] = [ ':source %'                          , 'source %' ]
 let g:which_key_map['c'] = [ ':Commands'                          , 'search commands']
 let g:which_key_map['d'] = [ ':bdelete'                           , 'delete buffer']
 let g:which_key_map['f'] = [ ':Files'                             , 'search files' ]
