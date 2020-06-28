@@ -9,6 +9,6 @@
     "json",
     "vim"
   ],
-  "explorer.width": 30,
+  "explorer.width": 34,
   "explorer.previewAction.onHover": false
 }
