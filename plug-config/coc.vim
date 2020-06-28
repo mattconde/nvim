@@ -9,5 +9,6 @@ let g:coc_global_extensions = [
       \'coc-flow',
       \'coc-markdownlint',
       \'coc-spell-checker',
-      \'coc-vimlsp'
+      \'coc-vimlsp',
+      \'coc-explorer'
       \]

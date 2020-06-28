@@ -28,6 +28,7 @@ let g:which_key_map['.'] = [ ':Startify'                          , 'start scree
 let g:which_key_map['%'] = [ ':source %'                          , 'source %' ]
 let g:which_key_map['c'] = [ ':Commands'                          , 'search commands']
 let g:which_key_map['d'] = [ ':bdelete'                           , 'delete buffer']
+let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                             , 'search files' ]
 let g:which_key_map['g'] = [ ':Rg'                                , 'search text' ]
 let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]

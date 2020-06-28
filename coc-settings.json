@@ -8,5 +8,7 @@
     "yaml",
     "json",
     "vim"
-  ]
+  ],
+  "explorer.width": 30,
+  "explorer.previewAction.onHover": false
 }
