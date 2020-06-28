@@ -33,4 +33,14 @@ Plug 'junegunn/goyo.vim'
 " Open terminal in floating window
 Plug 'voldikss/vim-floaterm'
 
+" Commenting out lines
+Plug 'tpope/vim-commentary'
+
 call plug#end()
+
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
+

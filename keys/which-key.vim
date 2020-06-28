@@ -23,6 +23,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
+let g:which_key_map['/'] = [ ':Commentary'                        , 'comment' ]
 let g:which_key_map[','] = [ ':e $MYVIMRC'                        , 'open init.vim' ]
 let g:which_key_map['.'] = [ ':Startify'                          , 'start screen' ]
 let g:which_key_map['%'] = [ ':source %'                          , 'source %' ]
