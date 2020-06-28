@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-" Theme 
+" Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Universal syntax highlighting
@@ -15,7 +15,7 @@ Plug 'mhinz/vim-startify'
 " Explore & Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Helps fzf find project root 
+" Helps fzf find project root
 Plug 'airblade/vim-rooter'
 
 " Leader key manager

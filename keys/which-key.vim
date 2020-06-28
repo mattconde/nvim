@@ -31,6 +31,7 @@ let g:which_key_map['d'] = [ ':bdelete'                           , 'delete buff
 let g:which_key_map['f'] = [ ':Files'                             , 'search files' ]
 let g:which_key_map['g'] = [ ':Rg'                                , 'search text' ]
 let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
+let g:which_key_map['S'] = [ ':SSave'                             , 'save session' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree' ]
 let g:which_key_map['w'] = [ 'w'                                  , 'write' ]
 let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
