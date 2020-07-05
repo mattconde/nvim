@@ -34,4 +34,5 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set incsearch
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:·
 set list
+set termguicolors
 

@@ -36,6 +36,13 @@ Plug 'voldikss/vim-floaterm'
 " Commenting out lines
 Plug 'tpope/vim-commentary'
 
+" Handle parens in pairs 
+Plug 'jiangmiao/auto-pairs'
+
+" Highlight colors
+Plug 'norcalli/nvim-colorizer.lua'
+
+
 call plug#end()
 
 " Automatically install missing plugins on startup

@@ -28,6 +28,7 @@ let g:which_key_map[','] = [ ':e $MYVIMRC'                        , 'open init.v
 let g:which_key_map['.'] = [ ':Startify'                          , 'start screen' ]
 let g:which_key_map['%'] = [ ':source %'                          , 'source %' ]
 let g:which_key_map['c'] = [ ':Commands'                          , 'search commands']
+let g:which_key_map['a'] = [ ':set nohlsearch'                    , 'clear selection highlights']
 let g:which_key_map['d'] = [ ':bdelete'                           , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                             , 'search files' ]

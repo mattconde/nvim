@@ -9,9 +9,10 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 
+lua require'plug-colorizer'
+
 " Theme
 colorscheme dracula
-set termguicolors
 let g:dracula_italic=0
 let g:airline_theme='dracula'
 colorscheme dracula
