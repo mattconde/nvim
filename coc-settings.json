@@ -3,12 +3,16 @@
     "css",
     "markdown",
     "javascript",
+    "typescript",
+    "typescriptreact",
     "graphql",
     "html",
     "yaml",
     "json",
-    "vim"
+    "vim",
+    "rust"
   ],
   "explorer.width": 34,
-  "explorer.previewAction.onHover": false
+  "explorer.previewAction.onHover": false,
+  "explorer.file.showHiddenFiles": true
 }
