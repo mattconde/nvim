@@ -23,7 +23,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map['/'] = [ ':Commentary'                        , 'comment' ]
 let g:which_key_map[','] = [ ':e $MYVIMRC'                        , 'open init.vim' ]
 let g:which_key_map['.'] = [ ':Startify'                          , 'start screen' ]
 let g:which_key_map['%'] = [ ':source %'                          , 'source %' ]
@@ -33,11 +32,12 @@ let g:which_key_map['d'] = [ ':bdelete'                           , 'delete buff
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                             , 'search files' ]
 let g:which_key_map['g'] = [ ':Rg'                                , 'search text' ]
+let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below' ]
 let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
 let g:which_key_map['S'] = [ ':SSave'                             , 'save session' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree' ]
+let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right' ]
 let g:which_key_map['w'] = [ 'w'                                  , 'write' ]
-let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
 
 " Group mappings
 "" b is for buffer
