@@ -6,6 +6,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " Easy motion
 Plug 'easymotion/vim-easymotion'
 
+" Fern - file explorer
+Plug 'lambdalisue/fern.vim'
+
 " Universal syntax highlighting
 Plug 'sheerun/vim-polyglot'
 

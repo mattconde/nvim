@@ -11,8 +11,5 @@
     "json",
     "vim",
     "rust"
-  ],
-  "explorer.width": 34,
-  "explorer.previewAction.onHover": false,
-  "explorer.file.showHiddenFiles": true
+  ]
 }

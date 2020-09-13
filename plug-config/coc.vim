@@ -10,6 +10,5 @@ let g:coc_global_extensions = [
   \'coc-markdownlint',
   \'coc-spell-checker',
   \'coc-vimlsp',
-  \'coc-explorer',
   \'coc-rls'
   \]
