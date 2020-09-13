@@ -3,6 +3,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+" Easy motion
+Plug 'easymotion/vim-easymotion'
+
 " Universal syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
@@ -15,6 +18,7 @@ Plug 'mhinz/vim-startify'
 " Explore & Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 " Helps fzf find project root
 Plug 'airblade/vim-rooter'
 
@@ -27,9 +31,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Undo history
 Plug 'mbbill/undotree'
 
-" Distraction-free writing
-Plug 'junegunn/goyo.vim'
-
 " Open terminal in floating window
 Plug 'voldikss/vim-floaterm'
 
@@ -39,9 +40,14 @@ Plug 'tpope/vim-commentary'
 " Handle parens in pairs 
 Plug 'jiangmiao/auto-pairs'
 
+" Better wrapping commands
+Plug 'tpope/vim-surround'
+
 " Highlight colors
 Plug 'norcalli/nvim-colorizer.lua'
 
+" Styled components
+Plug 'styled-components/vim-styled-components'
 
 call plug#end()
 
