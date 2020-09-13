@@ -10,9 +10,6 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 " Use Esc less hopefully
 inoremap jk <Esc>
 
-" Open Netrw, and resize
-nnoremap <leader>v :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
