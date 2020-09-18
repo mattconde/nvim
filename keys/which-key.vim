@@ -29,7 +29,7 @@ let g:which_key_map['%'] = [ ':source %'                                     , '
 let g:which_key_map['c'] = [ ':Commands'                                     , 'search commands']
 let g:which_key_map['a'] = [ ':set nohlsearch'                               , 'clear selection highlights']
 let g:which_key_map['d'] = [ ':bdelete'                                      , 'delete buffer']
-let g:which_key_map['e'] = [ ':Fern . -drawer -reveal=% -toggle -width=35'   , 'explorer' ]
+let g:which_key_map['e'] = [ ':Fern . -drawer -reveal=% -toggle'             , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                                        , 'search files' ]
 let g:which_key_map['g'] = [ ':Rg'                                           , 'search text' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                        , 'split below' ]

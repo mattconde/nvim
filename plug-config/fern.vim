@@ -19,24 +19,21 @@ function! s:hijack_directory() abort
 endfunction
 
 " Custom settings and mappings.
-let g:fern#disable_default_mappings = 1
+let g:fern#default_hidden = 1
+let g:fern#drawer_width = 35
+let g:fern#renderer = "nerdfont"
 
 function! FernInit() abort
-  nmap <buffer><expr>
-        \ <Plug>(fern-my-open-expand-collapse)
-        \ fern#smart#leaf(
-        \   "\<Plug>(fern-action-open:select)",
-        \   "\<Plug>(fern-action-expand)",
-        \   "\<Plug>(fern-action-collapse)",
-        \ )
-  nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
-  nmap <buffer> n <Plug>(fern-action-new-path)
-  nmap <buffer> d <Plug>(fern-action-remove)
-  nmap <buffer> m <Plug>(fern-action-move)
-  nmap <buffer> M <Plug>(fern-action-rename)
   nmap <buffer> r <Plug>(fern-action-reload)
-  nmap <buffer> h <Plug>(fern-action-collapse)
-  nmap <buffer> l <Plug>(fern-action-expand)
+  nmap <buffer> <CR> <Plug>(fern-action-open:select)
+  nmap <buffer> H <Plug>(fern-action-open:split)
+  nmap <buffer> V <Plug>(fern-action-open:vsplit)
+  nmap <buffer> m <Plug>(fern-action-mark)
+  nmap <buffer> R <Plug>(fern-action-rename)
+  nmap <buffer> M <Plug>(fern-action-move)
+  nmap <buffer> C <Plug>(fern-action-copy)
+  nmap <buffer> N <Plug>(fern-action-new-path)
+  nmap <buffer> dd <Plug>(fern-action-trash)
 endfunction
 
 augroup FernGroup

@@ -8,6 +8,8 @@ Plug 'easymotion/vim-easymotion'
 
 " Fern - file explorer
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
 " Universal syntax highlighting
 Plug 'sheerun/vim-polyglot'
