@@ -123,7 +123,7 @@ let g:which_key_map.l = {
 "" t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
-      \ 't' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 't' : [':FloatermNew'                                   , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
