@@ -7,16 +7,16 @@ nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go to the previous buffer
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
-" Use Esc less hopefully
+" use Esc less hopefully
 inoremap jk <Esc>
 
-" Better window navigation
+" better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Move selected or current lines up and down
+" move selected or current lines up and down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
@@ -35,3 +35,6 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+" avoid unintentional switches to Ex mode.
+nnoremap Q <nop>
