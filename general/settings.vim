@@ -1,7 +1,9 @@
 syntax enable
 
-set autoindent                                                    " Good auto indent
+set autoindent                                                    " maintain indent of current line
 set background=dark                                               " tell vim what the background color looks like
+set backspace=indent,start,eol                                    " allow unrestricted backspacing in insert mode
+set belloff=all                                                   " never ring the bell for any reason
 set cmdheight=2                                                   " More space for displaying messages
 set clipboard=unnamedplus                                         " Copy paste between vim and everything else
 set completeopt=menuone,noinsert,noselect                         " Disable auto insert when using nvim lsp
@@ -12,11 +14,20 @@ set expandtab                                                     " Converts tab
 set fileencoding=utf-8                                            " The encoding written to file
 set formatoptions-=cro                                            " Stop newline continution of comments
 set guicursor=                                                    " Disable blinking for the n-v-c modes
+set hidden                                                        " allows you to hide buffers with unsaved changes without being prompted
 set incsearch
 set iskeyword+=-                                                  " treat dash separated words as a word text object"
 set laststatus=2                                                  " Always display the status line
-set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:·
 set list
+set listchars=eol:¬
+set listchars+=nbsp:⦸
+set listchars+=space:·
+set listchars+=tab:>-
+set listchars+=extends:>
+set listchars+=precedes:<
+set listchars+=trail:~
+set mouse=a                                                       " enable mouse for all modes
+set ttymouse=xterm2                                               " required for the above; mouse in all modes
 set nobackup                                                      " This is recommended by coc
 set nowritebackup                                                 " This is recommended by coc
 set nowrap                                                        " Display long lines as just one line
@@ -24,6 +35,7 @@ set number                                                        " Line numbers
 set pumheight=10                                                  " Makes popup menu smaller
 set ruler                                                         " Show the cursor position all the time
 set relativenumber                                                " Relative line numbers
+set scrolloff=5                                                   " start scrolling n lines before edge of viewport
 set splitbelow                                                    " Horizontal splits will automatically be below
 set splitright                                                    " Vertical splits will automatically be to the right
 set shiftwidth=2                                                  " Change the number of space characters inserted for indentation
