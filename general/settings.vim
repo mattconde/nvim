@@ -6,6 +6,7 @@ set backspace=indent,start,eol                                    " allow unrest
 set belloff=all                                                   " never ring the bell for any reason
 set cmdheight=2                                                   " More space for displaying messages
 set clipboard=unnamedplus                                         " Copy paste between vim and everything else
+set colorcolumn=80                                                " Set highlighted column
 set completeopt=menuone,noinsert,noselect                         " Disable auto insert when using nvim lsp
 set conceallevel=0                                                " So that I can see `` in markdown files
 set cursorline                                                    " Enable highlighting of the current line
@@ -27,7 +28,6 @@ set listchars+=extends:>
 set listchars+=precedes:<
 set listchars+=trail:~
 set mouse=a                                                       " enable mouse for all modes
-set ttymouse=xterm2                                               " required for the above; mouse in all modes
 set nobackup                                                      " This is recommended by coc
 set nowritebackup                                                 " This is recommended by coc
 set nowrap                                                        " Display long lines as just one line
@@ -35,7 +35,7 @@ set number                                                        " Line numbers
 set pumheight=10                                                  " Makes popup menu smaller
 set ruler                                                         " Show the cursor position all the time
 set relativenumber                                                " Relative line numbers
-set scrolloff=5                                                   " start scrolling n lines before edge of viewport
+set scrolloff=20                                                  " start scrolling n lines before edge of viewport
 set splitbelow                                                    " Horizontal splits will automatically be below
 set splitright                                                    " Vertical splits will automatically be to the right
 set shiftwidth=2                                                  " Change the number of space characters inserted for indentation
@@ -47,5 +47,5 @@ set signcolumn=yes                                                " Always show 
 set t_Co=256                                                      " Support 256 colors
 set tabstop=2 softtabstop=2                                       " Insert 2 spaces for a tab
 set termguicolors
-set updatetime=750                                                " Faster completion
+set updatetime=750                                                " Faster completion - default is 4000 ms
 
