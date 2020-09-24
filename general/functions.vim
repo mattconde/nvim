@@ -4,7 +4,8 @@ augroup auto_spellcheck
 augroup END
 
 " Quickly flashes to highlight the yanked text
-augroup LuaHighlight
-  au!
-  au TextYankPost * lua vim.highlight.on_yank { higroup = "Substitute", timeout = 300, on_macro = true }
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({ higroup = "Substitute", timeout = 300, on_macro = true })
 augroup END
+
