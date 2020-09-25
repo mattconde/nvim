@@ -17,12 +17,30 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " move selected or current lines up and down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+function! s:Visual()
+  return visualmode() == 'V'
+endfunction
+
+function! s:Move(address, at_limit)
+  if s:Visual() && !a:at_limit
+    execute "'<,'>move " . a:address
+    call feedkeys('gv=', 'n')
+  endif
+  call feedkeys('gv', 'n')
+endfunction
+
+function! Move_up() abort range
+  let l:at_top=a:firstline == 1
+  call s:Move("'<-2", l:at_top)
+endfunction
+
+function! Move_down() abort range
+  let l:at_bottom=a:lastline == line('$')
+  call s:Move("'>+1", l:at_bottom)
+endfunction
+
+xnoremap <silent> K :call Move_up()<CR>
+xnoremap <silent> J :call Move_down()<CR>
 
 " disable arrows in most modes
 noremap <Up> <Nop>

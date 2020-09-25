@@ -42,7 +42,7 @@ set shiftwidth=2                                                  " Change the n
 set smarttab                                                      " Makes tabbing smarter will realize you have 2 vs 4
 set smartindent                                                   " Makes indenting smart
 set showtabline=2                                                 " Always show tabs 
-set shortmess+=c                                                  " Don't pass messages to |ins-completion-menu|.
+set shortmess+=c                                                  " Don't pass messages to ins-completion-menu
 set signcolumn=yes                                                " Always show the signcolumn, otherwise it would shift the text each time
 set t_Co=256                                                      " Support 256 colors
 set tabstop=2 softtabstop=2                                       " Insert 2 spaces for a tab
