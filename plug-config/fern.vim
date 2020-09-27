@@ -23,18 +23,37 @@ let g:fern#default_hidden = 1
 let g:fern#drawer_width = 35
 let g:fern#renderer = "nerdfont"
 let g:fern#disable_viewer_hide_cursor = 1
+let g:fern#disable_default_mappings = 1
 
 function! FernInit() abort
-  nmap <buffer> r <Plug>(fern-action-reload)
+  " Movement keys
+  nmap <buffer> h <Plug>(fern-action-collapse)
+  " j - Works even when defaults are disabled
+  " k - Works even when defaults are disabled
+  nmap <buffer> l <Plug>(fern-action-expand)
+
+  " Opens
   nmap <buffer> <CR> <Plug>(fern-action-open:select)
   nmap <buffer> H <Plug>(fern-action-open:split)
   nmap <buffer> V <Plug>(fern-action-open:vsplit)
-  nmap <buffer> m <Plug>(fern-action-mark)
+
+  " File handling
   nmap <buffer> R <Plug>(fern-action-rename)
   nmap <buffer> M <Plug>(fern-action-move)
-  nmap <buffer> C <Plug>(fern-action-copy)
   nmap <buffer> N <Plug>(fern-action-new-path)
   nmap <buffer> dd <Plug>(fern-action-trash)
+
+  " Copy path
+  nmap <buffer> y <Plug>(fern-action-yank:path)
+
+  " Manual refresh
+  nmap <buffer> r <Plug>(fern-action-reload)
+
+  " Mark multiple files for another action
+  nmap <buffer> m <Plug>(fern-action-mark)
+
+  " Cancel
+  nmap <buffer> <Esc> <Plug>(fern-action-cancel)
 endfunction
 
 augroup FernGroup
