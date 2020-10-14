@@ -21,10 +21,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-startify'
 
 " Explore & Search
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
 
-" Helps fzf find project root
+" Helps find project root
 Plug 'airblade/vim-rooter'
 
 " Leader key manager

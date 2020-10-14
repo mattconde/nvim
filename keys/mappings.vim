@@ -16,6 +16,22 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" make X behave like d without adding removed data to a register
+nnoremap X "_d
+nnoremap XX "_dd
+vnoremap X "_d
+vnoremap x "_d
+nnoremap x "_d
+
+" search
+nnoremap <C-g> :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<CR>
+
+" search word
+nnoremap <C-f> :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({ search = vim.fn.expand("<cword>") }))<CR>
+
+" explore files
+nnoremap <C-p> :lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown({}))<CR>
+
 " move selected or current lines up and down
 function! s:Visual()
   return visualmode() == 'V'

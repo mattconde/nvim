@@ -30,8 +30,6 @@ let g:which_key_map['c'] = [ ':Commands'                                     , '
 let g:which_key_map['a'] = [ ':set nohlsearch'                               , 'clear selection highlights']
 let g:which_key_map['d'] = [ ':bdelete'                                      , 'delete buffer']
 let g:which_key_map['e'] = [ ':Fern . -drawer -reveal=% -toggle'             , 'explorer' ]
-let g:which_key_map['f'] = [ ':Files'                                        , 'search files' ]
-let g:which_key_map['g'] = [ ':Rg'                                           , 'search text' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                        , 'split below' ]
 let g:which_key_map['q'] = [ 'q'                                             , 'quit' ]
 let g:which_key_map['S'] = [ ':SSave'                                        , 'save session' ]
@@ -51,34 +49,6 @@ let g:which_key_map.b = {
       \ 'n' : ['bnext'     , 'next-buffer']     ,
       \ 'p' : ['bprevious' , 'previous-buffer'] ,
       \ '?' : ['Buffers'   , 'fzf-buffer']      ,
-      \ }
-
-"" s is for search
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
-      \ '/' : [':History/'              , 'history'],
-      \ 'a' : [':Ag'                    , 'text Ag'],
-      \ 'b' : [':BLines'                , 'current buffer'],
-      \ 'B' : [':Buffers'               , 'open buffers'],
-      \ 'c' : [':Commits'               , 'commits'],
-      \ 'C' : [':BCommits'              , 'buffer commits'],
-      \ 'f' : [':Files'                 , 'files'],
-      \ 'g' : [':GFiles'                , 'git files'],
-      \ 'G' : [':GFiles?'               , 'modified git files'],
-      \ 'h' : [':History'               , 'file history'],
-      \ 'H' : [':History:'              , 'command history'],
-      \ 'l' : [':Lines'                 , 'lines'] ,
-      \ 'm' : [':Marks'                 , 'marks'] ,
-      \ 'M' : [':Maps'                  , 'normal maps'] ,
-      \ 'p' : [':Helptags'              , 'help tags'] ,
-      \ 'P' : [':Tags'                  , 'project tags'],
-      \ 's' : [':CocList snippets'      , 'snippets'],
-      \ 'S' : [':Colors'                , 'color schemes'],
-      \ 't' : [':Rg'                    , 'text Rg'],
-      \ 'T' : [':BTags'                 , 'buffer tags'],
-      \ 'w' : [':Windows'               , 'search windows'],
-      \ 'y' : [':Filetypes'             , 'file types'],
-      \ 'z' : [':FZF'                   , 'FZF'],
       \ }
 
 "" l is for language server protocol
@@ -124,10 +94,7 @@ let g:which_key_map.l = {
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ 't' : [':FloatermNew'                                   , 'terminal'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
       \ }
 
 " Register which key map
