@@ -11,6 +11,9 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
+" Git
+Plug 'tpope/vim-fugitive'
+
 " Universal syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
@@ -24,6 +27,11 @@ Plug 'mhinz/vim-startify'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
+
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " Helps find project root
 Plug 'airblade/vim-rooter'

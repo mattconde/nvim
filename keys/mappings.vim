@@ -2,11 +2,6 @@
 let mapleader = " "
 nnoremap <Space> <Nop>
 
-" TAB will move to next buffer
-nnoremap <silent> <TAB> :bnext<CR>
-" SHIFT-TAB will go to the previous buffer
-nnoremap <silent> <S-TAB> :bprevious<CR>
-
 " use Esc less hopefully
 inoremap jk <Esc>
 
@@ -24,7 +19,9 @@ vnoremap x "_d
 nnoremap x "_d
 
 " search
-nnoremap <C-g> :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<CR>
+" currently broken in telescope - https://github.com/nvim-lua/telescope.nvim/issues?q=is%3Aissue+is%3Aopen+live_grep
+" nnoremap <C-g> :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<CR>
+nnoremap <C-g> :Rg<CR>
 
 " search word
 nnoremap <C-f> :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({ search = vim.fn.expand("<cword>") }))<CR>
