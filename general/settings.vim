@@ -41,7 +41,7 @@ set splitright                                                    " Vertical spl
 set shiftwidth=2                                                  " Change the number of space characters inserted for indentation
 set smarttab                                                      " Makes tabbing smarter will realize you have 2 vs 4
 set smartindent                                                   " Makes indenting smart
-set showtabline=2                                                 " Always show tabs 
+set showtabline=0                                                 " Disable tabline at the top
 set shortmess+=c                                                  " Don't pass messages to ins-completion-menu
 set signcolumn=yes                                                " Always show the signcolumn, otherwise it would shift the text each time
 set t_Co=256                                                      " Support 256 colors
