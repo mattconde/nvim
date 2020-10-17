@@ -36,17 +36,8 @@ Plug 'stsewd/fzf-checkout.vim'
 " Helps find project root
 Plug 'airblade/vim-rooter'
 
-" Leader key manager
-Plug 'liuchengxu/vim-which-key'
-
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Undo history
-Plug 'mbbill/undotree'
-
-" Open terminal in floating window
-Plug 'voldikss/vim-floaterm'
 
 " Commenting out lines
 Plug 'tpope/vim-commentary'
