@@ -50,7 +50,7 @@ nnoremap <leader>g :GFiles?<CR>
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nnoremap s <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-overwin-f)
 
 " move selected or current lines up and down
 xnoremap <silent> K :call Move_up()<CR>
