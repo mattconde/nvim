@@ -15,7 +15,8 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'tpope/vim-fugitive'
 
 " Universal syntax highlighting
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 " Status line
 Plug 'vim-airline/vim-airline'
