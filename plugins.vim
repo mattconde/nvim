@@ -14,10 +14,6 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 " Git
 Plug 'tpope/vim-fugitive'
 
-" Universal syntax highlighting
-" Plug 'sheerun/vim-polyglot'
-" Plug 'nvim-treesitter/nvim-treesitter'
-
 " Status line
 Plug 'vim-airline/vim-airline'
 
@@ -54,6 +50,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " Styled components
 Plug 'styled-components/vim-styled-components'
+
+" Syntax Highlighting
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
