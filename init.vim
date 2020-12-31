@@ -8,7 +8,6 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 
-luafile $HOME/.config/nvim/lua/treesitter.lua
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " Theme

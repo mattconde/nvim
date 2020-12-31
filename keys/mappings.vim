@@ -29,15 +29,13 @@ nnoremap <leader>d :bdelete<CR>
 nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 
 " search
-" currently broken in telescope - https://github.com/nvim-lua/telescope.nvim/issues?q=is%3Aissue+is%3Aopen+live_grep
-" nnoremap <C-g> :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<CR>
 nnoremap <C-g> :Rg<CR>
 
 " search word
-nnoremap <C-f> :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({ search = vim.fn.expand("<cword>") }))<CR>
+nnoremap <C-f> :Rg <C-r><C-w><CR>
 
 " explore files
-nnoremap <C-p> :lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown({}))<CR>
+nnoremap <C-p> :Files<CR>
 
 " navigate open buffers
 nnoremap <leader>b :Buffers<CR>

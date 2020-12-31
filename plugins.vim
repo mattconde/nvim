@@ -20,11 +20,6 @@ Plug 'vim-airline/vim-airline'
 " Custom start screen
 Plug 'mhinz/vim-startify'
 
-" Explore & Search
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/telescope.nvim'
-
 " Fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -35,6 +30,9 @@ Plug 'airblade/vim-rooter'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Editorconfig support
+Plug 'editorconfig/editorconfig-vim'
 
 " Commenting out lines
 Plug 'tpope/vim-commentary'
@@ -50,9 +48,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " Styled components
 Plug 'styled-components/vim-styled-components'
-
-" Syntax Highlighting
-Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
