@@ -25,7 +25,8 @@ let g:startify_session_persistence = 1
 let g:webdevicons_enable_startify = 1
 
 let g:startify_bookmarks = [
-  \ { 'z': '~/.zshrc' },
+  \ { 'Z': '~/.zshrc' },
+  \ { 'z': '~/.config/zsh/.zshrc' },
   \ { 'i': '~/.config/nvim/init.vim' },
   \ { 's': '~/.config/starship.toml' },
   \ { 'c': '~/projects/conde.sh/' },
