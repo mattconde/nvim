@@ -46,7 +46,7 @@ nnoremap <leader>c :Commands<CR>
 " navigate changed git files
 nnoremap <leader>g :GFiles?<CR>
 
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" sump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
 nmap s <Plug>(easymotion-overwin-f)
 

@@ -1,4 +1,4 @@
-" Disable netrw.
+" disable netrw.
 let g:loaded_netrw  = 1
 let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
@@ -18,7 +18,7 @@ function! s:hijack_directory() abort
   execute printf('Fern %s', fnameescape(path))
 endfunction
 
-" Custom settings and mappings.
+" custom settings and mappings.
 let g:fern#default_hidden = 1
 let g:fern#drawer_width = 35
 let g:fern#renderer = "nerdfont"
@@ -26,33 +26,33 @@ let g:fern#disable_viewer_hide_cursor = 1
 let g:fern#disable_default_mappings = 1
 
 function! FernInit() abort
-  " Movement keys
+  " movement keys
   nmap <buffer> h <Plug>(fern-action-collapse)
   " j - Works even when defaults are disabled
   " k - Works even when defaults are disabled
   nmap <buffer> l <Plug>(fern-action-expand)
 
-  " Opens
+  " opens
   nmap <buffer> <CR> <Plug>(fern-action-open:select)
   nmap <buffer> H <Plug>(fern-action-open:split)
   nmap <buffer> V <Plug>(fern-action-open:vsplit)
 
-  " File handling
+  " file handling
   nmap <buffer> R <Plug>(fern-action-rename)
   nmap <buffer> M <Plug>(fern-action-move)
   nmap <buffer> N <Plug>(fern-action-new-path)
   nmap <buffer> dd <Plug>(fern-action-trash)
 
-  " Copy path
+  " copy path
   nmap <buffer> y <Plug>(fern-action-yank:path)
 
-  " Manual refresh
+  " manual refresh
   nmap <buffer> r <Plug>(fern-action-reload)
 
-  " Mark multiple files for another action
+  " mark multiple files for another action
   nmap <buffer> m <Plug>(fern-action-mark)
 
-  " Cancel
+  " cancel
   nmap <buffer> <Esc> <Plug>(fern-action-cancel)
 endfunction
 

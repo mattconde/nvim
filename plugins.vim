@@ -1,57 +1,54 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-" Theme
+" theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" Easy motion
+" easy motion
 Plug 'easymotion/vim-easymotion'
 
-" Fern - file explorer
+" fern - file explorer
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
-" Git
+" git
 Plug 'tpope/vim-fugitive'
 
-" Status line
-Plug 'vim-airline/vim-airline'
-
-" Custom start screen
+" custom start screen
 Plug 'mhinz/vim-startify'
 
-" Fzf
+" fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 
-" Helps find project root
+" helps find project root
 Plug 'airblade/vim-rooter'
 
-" Intellisense
+" intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Editorconfig support
+" editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 
-" Commenting out lines
+" commenting out lines
 Plug 'tpope/vim-commentary'
 
-" Handle parens in pairs 
+" handle parens in pairs 
 Plug 'jiangmiao/auto-pairs'
 
-" Better wrapping commands
+" better wrapping commands
 Plug 'tpope/vim-surround'
 
-" Highlight colors
+" highlight colors
 Plug 'norcalli/nvim-colorizer.lua'
 
-" Styled components
+" styled components
 Plug 'styled-components/vim-styled-components'
 
 call plug#end()
 
-" Automatically install missing plugins on startup
+" automatically install missing plugins on startup
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
