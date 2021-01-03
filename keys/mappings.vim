@@ -60,6 +60,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" better splits
+nnoremap <leader>h :vsplit<CR>
+nnoremap <leader>j :split<CR>
+nnoremap <leader>k :split<CR>
+nnoremap <leader>l :vsplit<CR>
+
 " disable arrows in most modes
 noremap <Up> <Nop>
 noremap <Down> <Nop>
