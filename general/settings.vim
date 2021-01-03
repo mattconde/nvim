@@ -18,7 +18,6 @@ set guicursor=                                                    " Disable blin
 set hidden                                                        " allows you to hide buffers with unsaved changes without being prompted
 set incsearch
 set iskeyword+=-                                                  " treat dash separated words as a word text object"
-set laststatus=2                                                  " Always display the status line
 set list
 set listchars=eol:¬
 set listchars+=nbsp:⦸
