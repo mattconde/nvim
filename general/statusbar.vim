@@ -35,38 +35,37 @@ let g:currentmode={
       \ 't'   : 'Terminal'
       \}
 
+" set local statusline for fern buffers
+au FileType fern setlocal statusline=%4*\\
+exe 'hi User4 guibg='.s:bg.' guifg='.s:bg
+
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
     exe 'hi statusline guibg='.s:bg.' guifg='.s:comment
     exe 'hi User1 guibg='.s:bg.' guifg='.s:pink
     exe 'hi User2 guibg='.s:bg.' guifg='.s:comment
     exe 'hi User3 guibg='.s:bg.' guifg='.s:bglight
-    exe 'hi User4 guibg='.s:bg.' guifg='.s:comment
   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
     exe 'hi statusline guibg='.s:yellow.' guifg='.s:bg
     exe 'hi User1 guibg='.s:yellow.' guifg='.s:bg
     exe 'hi User2 guibg='.s:yellow.' guifg='.s:bg
     exe 'hi User3 guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User4 guibg='.s:yellow.' guifg='.s:bg
   elseif (mode() ==# 'i')
     exe 'hi statusline guibg='.s:purple.' guifg='.s:bg
     exe 'hi User1 guibg='.s:purple.' guifg='.s:bg
     exe 'hi User2 guibg='.s:purple.' guifg='.s:bg
     exe 'hi User3 guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User4 guibg='.s:purple.' guifg='.s:bg
   elseif (mode() ==# 'c')
     exe 'hi statusline guibg='.s:pink.' guifg='.s:bg
     exe 'hi User1 guibg='.s:pink.' guifg='.s:bg
     exe 'hi User2 guibg='.s:pink.' guifg='.s:bg
     exe 'hi User3 guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User4 guibg='.s:pink.' guifg='.s:bg
   else
     echo 'WARNING: Displaying Orange statusline for mode: '.mode()
     exe 'hi statusline guibg='.s:orange.' guifg='.s:bg
     exe 'hi User1 guibg='.s:orange.' guifg='.s:bg
     exe 'hi User2 guibg='.s:orange.' guifg='.s:bg
     exe 'hi User3 guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User4 guibg='.s:orange.' guifg='.s:bg
   endif
 
   return ''
@@ -77,16 +76,12 @@ set laststatus=2
 set noshowmode
 set statusline=
 set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
-set statusline+=%0*\ %n\                                 " Buffer number
 set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
 set statusline+=%3*│                                     " Separator
 set statusline+=%2*\ %Y\                                 " FileType
-set statusline+=%3*│                                     " Separator
-set statusline+=%2*\ %{''.(&fenc!=''?&fenc:&enc).''}     " Encoding
-set statusline+=\ (%{&ff})                               " FileFormat (dos/unix..)
 set statusline+=%=                                       " Right Side
-set statusline+=%2*\ col:\ %02v\                         " Colomn number
+set statusline+=%2*\ col:\ %02v\                         " Col number
 set statusline+=%3*│                                     " Separator
-set statusline+=%2*\ ln:\ %02l/%L\ (%3p%%)\              " Line number / total lines, percentage of document
+set statusline+=%2*\ line:\ %02l/%L\ %3p%%\              " Line number / total lines, percentage of document
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
 
