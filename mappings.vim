@@ -29,10 +29,10 @@ nnoremap <leader>d :bdelete<CR>
 nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 
 " search
-nnoremap <C-g> :Rg<CR>
+nnoremap <C-g> :GFindText<CR>
 
 " search word
-nnoremap <C-f> :Rg <C-r><C-w><CR>
+nnoremap <C-f> :GFindText <C-r><C-w><CR>
 
 " explore files
 nnoremap <C-p> :Files<CR>

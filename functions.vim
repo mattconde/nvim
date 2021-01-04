@@ -31,3 +31,13 @@ function! Move_down() abort range
   let l:at_bottom=a:lastline == line('$')
   call s:Move("'>+1", l:at_bottom)
 endfunction
+
+command! -bang -nargs=* FindText
+  \ call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --no-ignore --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
+  \ fzf#vim#with_preview(),
+  \ <bang>0)
+
+command! -bang -nargs=* GFindText
+  \ call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!*.lock" --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
+  \ fzf#vim#with_preview(),
+  \ <bang>0)

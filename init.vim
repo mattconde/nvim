@@ -1,11 +1,12 @@
 source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/functions.vim
-source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/plug-config/easymotion.vim
-source $HOME/.config/nvim/plug-config/fern.vim
-source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/start-screen.vim
+source $HOME/.config/nvim/settings.vim
+source $HOME/.config/nvim/functions.vim
+source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/plugin-config/easymotion.vim
+source $HOME/.config/nvim/plugin-config/fzf.vim
+source $HOME/.config/nvim/plugin-config/fern.vim
+source $HOME/.config/nvim/plugin-config/coc.vim
+source $HOME/.config/nvim/plugin-config/start-screen.vim
 
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
@@ -17,4 +18,4 @@ highlight Normal ctermbg=None
 
 " import statusbar after theme because it uses a lot of dracula colors
 " and sets a lot of highlights itself
-source $HOME/.config/nvim/general/statusbar.vim
+source $HOME/.config/nvim/statusbar.vim
