@@ -27,14 +27,17 @@ set listchars+=extends:>
 set listchars+=precedes:<
 set listchars+=trail:~
 set mouse=a                                                       " enable mouse for all modes
+set noswapfile
 set nobackup                                                      " This is recommended by coc
 set nowritebackup                                                 " This is recommended by coc
+set undofile
+set undodir=~/.config/nvim/undodir
 set nowrap                                                        " Display long lines as just one line
 set number                                                        " Line numbers
 set pumheight=10                                                  " Makes popup menu smaller
 set ruler                                                         " Show the cursor position all the time
 set relativenumber                                                " Relative line numbers
-set scrolloff=20                                                  " start scrolling n lines before edge of viewport
+set scrolloff=30                                                  " start scrolling n lines before edge of viewport
 set splitbelow                                                    " Horizontal splits will automatically be below
 set splitright                                                    " Vertical splits will automatically be to the right
 set shiftwidth=2                                                  " Change the number of space characters inserted for indentation
