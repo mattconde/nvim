@@ -36,36 +36,41 @@ let g:currentmode={
       \}
 
 " set local statusline for fern buffers
-au FileType fern setlocal statusline=%4*\\
-exe 'hi User4 guibg='.s:bg.' guifg='.s:bg
+au FileType fern setlocal statusline=%5*\\
+exe 'hi User5 guibg='.s:bg.' guifg='.s:bg
+
+exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
+exe 'hi statuslinenc guibg='.s:bg.' guifg='.s:comment
+exe 'hi User1 guibg='.s:bg.' guifg='.s:comment
+exe 'hi User2 gui=bold'
+exe 'hi User3 gui=bold'
 
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
-    exe 'hi statusline guibg='.s:bg.' guifg='.s:comment
-    exe 'hi User1 guibg='.s:bg.' guifg='.s:pink
-    exe 'hi User2 guibg='.s:bg.' guifg='.s:comment
-    exe 'hi User3 guibg='.s:bg.' guifg='.s:bglight
+    exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
+    exe 'hi User1 guibg='.s:purple.' guifg='.s:bgdark
+    exe 'hi User2 gui=bold guibg='.s:purple.' guifg='.s:bgdark
+    exe 'hi User3 gui=bold guibg='.s:purple.' guifg='.s:bgdark
   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
     exe 'hi statusline guibg='.s:yellow.' guifg='.s:bg
     exe 'hi User1 guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User2 guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User3 guibg='.s:yellow.' guifg='.s:bg
+    exe 'hi User2 gui=bold guibg='.s:yellow.' guifg='.s:bg
+    exe 'hi User3 gui=bold guibg='.s:yellow.' guifg='.s:bg
   elseif (mode() ==# 'i')
-    exe 'hi statusline guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User1 guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User2 guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User3 guibg='.s:purple.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:green.' guifg='.s:bg
+    exe 'hi User1 guibg='.s:green.' guifg='.s:bg
+    exe 'hi User2 gui=bold guibg='.s:green.' guifg='.s:bg
+    exe 'hi User3 ggui=bold uibg='.s:green.' guifg='.s:bg
   elseif (mode() ==# 'c')
     exe 'hi statusline guibg='.s:pink.' guifg='.s:bg
     exe 'hi User1 guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User2 guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User3 guibg='.s:pink.' guifg='.s:bg
+    exe 'hi User2 gui=bold guibg='.s:pink.' guifg='.s:bg
+    exe 'hi User3 gui=bold guibg='.s:pink.' guifg='.s:bg
   else
-    echo 'WARNING: Displaying Orange statusline for mode: '.mode()
     exe 'hi statusline guibg='.s:orange.' guifg='.s:bg
     exe 'hi User1 guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User2 guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User3 guibg='.s:orange.' guifg='.s:bg
+    exe 'hi User2 gui=bold guibg='.s:orange.' guifg='.s:bg
+    exe 'hi User3 gui=bold guibg='.s:orange.' guifg='.s:bg
   endif
 
   return ''
@@ -76,12 +81,15 @@ set laststatus=2
 set noshowmode
 set statusline=
 set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
-set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
-set statusline+=%3*│                                     " Separator
-set statusline+=%2*\ %Y\                                 " FileType
+set statusline+=%1*\                                     " Space
+set statusline+=%2*\%<%F%m%r%h%w                         " File path, modified, readonly, helpfile, preview
+set statusline+=%1*\ ‹‹                                  " Separator
+set statusline+=%1*\ %Y                                  " Filetype
+set statusline+=%1*\ ››                                  " Separator
 set statusline+=%=                                       " Right Side
-set statusline+=%2*\ col:\ %02v\                         " Col number
-set statusline+=%3*│                                     " Separator
-set statusline+=%2*\ line:\ %02l/%L\ %3p%%\              " Line number / total lines, percentage of document
-set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
+set statusline+=%1*\ ‹‹                                  " Separator
+set statusline+=%1*\ %02v\ %02l/%L                       " Column Line TotalLines
+set statusline+=%1*\ ››                                  " Separator
+set statusline+=%3*\ %{toupper(g:currentmode[mode()])}   " Current mode
+set statusline+=%1*\                                     " Space
 
