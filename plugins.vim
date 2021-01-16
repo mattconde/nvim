@@ -3,9 +3,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" easy motion
-Plug 'easymotion/vim-easymotion'
-
 " fern - file explorer
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
@@ -45,6 +42,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " styled components
 Plug 'styled-components/vim-styled-components'
+
+" graphql support
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 

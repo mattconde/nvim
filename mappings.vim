@@ -31,11 +31,17 @@ nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 " search
 nnoremap <C-g> :GFindText<CR>
 
-" search word
+" search word under cursor
 nnoremap <C-f> :GFindText <C-r><C-w><CR>
 
 " explore files
 nnoremap <C-p> :Files<CR>
+
+" search word under cursor in buffe
+nnoremap <C-s> /<C-r><C-w><CR>
+
+" replace word under cursor in buffer
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " navigate open buffers
 nnoremap <leader>b :Buffers<CR>
@@ -45,10 +51,6 @@ nnoremap <leader>c :Commands<CR>
 
 " navigate changed git files
 nnoremap <leader>g :GFiles?<CR>
-
-" sump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
 
 " move selected or current lines up and down
 xnoremap <silent> K :call Move_up()<CR>
@@ -67,10 +69,10 @@ nnoremap <leader>k :split<CR>
 nnoremap <leader>l :vsplit<CR>
 
 " disable arrows in most modes
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
 
 " disable arrows in insert mode
 inoremap <Up> <Nop>

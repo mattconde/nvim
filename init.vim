@@ -2,7 +2,6 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/plugin-config/easymotion.vim
 source $HOME/.config/nvim/plugin-config/fzf.vim
 source $HOME/.config/nvim/plugin-config/fern.vim
 source $HOME/.config/nvim/plugin-config/coc.vim
