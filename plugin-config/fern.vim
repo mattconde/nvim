@@ -20,9 +20,8 @@ endfunction
 
 " custom settings and mappings.
 let g:fern#default_hidden = 1
-let g:fern#drawer_width = 35
+let g:fern#drawer_width = 45
 let g:fern#renderer = "nerdfont"
-let g:fern#disable_viewer_hide_cursor = 1
 let g:fern#disable_default_mappings = 1
 
 function! FernInit() abort
