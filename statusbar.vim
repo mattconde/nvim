@@ -1,7 +1,9 @@
 " colors
 let s:bg       = g:dracula#palette.bg[0]
-let s:bglight  = g:dracula#palette.bglighter[0]
-let s:bgdark   = g:dracula#palette.bgdarker[0]
+let s:bglight  = g:dracula#palette.bglight[0]
+let s:bglighter= g:dracula#palette.bglighter[0]
+let s:bgdark   = g:dracula#palette.bgdark[0]
+let s:bgdarker = g:dracula#palette.bgdarker[0]
 let s:fg       = g:dracula#palette.fg[0]
 let s:selection= g:dracula#palette.selection[0]
 let s:comment  = g:dracula#palette.comment[0]
@@ -12,6 +14,9 @@ let s:pink     = g:dracula#palette.pink[0]
 let s:purple   = g:dracula#palette.purple[0]
 let s:red      = g:dracula#palette.red[0]
 let s:yellow   = g:dracula#palette.yellow[0]
+
+" Background colors for terminal windows
+exe 'hi NormalNC guibg='.s:bgdark
 
 let g:currentmode={
       \ 'n'   : 'Normal',
@@ -60,7 +65,7 @@ function! ChangeStatuslineColor()
     exe 'hi statusline guibg='.s:green.' guifg='.s:bg
     exe 'hi User1 guibg='.s:green.' guifg='.s:bg
     exe 'hi User2 gui=bold guibg='.s:green.' guifg='.s:bg
-    exe 'hi User3 ggui=bold uibg='.s:green.' guifg='.s:bg
+    exe 'hi User3 gui=bold guibg='.s:green.' guifg='.s:bg
   elseif (mode() ==# 'c')
     exe 'hi statusline guibg='.s:pink.' guifg='.s:bg
     exe 'hi User1 guibg='.s:pink.' guifg='.s:bg
