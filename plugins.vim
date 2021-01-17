@@ -31,12 +31,6 @@ Plug 'editorconfig/editorconfig-vim'
 " commenting out lines
 Plug 'tpope/vim-commentary'
 
-" handle parens in pairs 
-Plug 'jiangmiao/auto-pairs'
-
-" better wrapping commands
-Plug 'tpope/vim-surround'
-
 " highlight colors
 Plug 'norcalli/nvim-colorizer.lua'
 
