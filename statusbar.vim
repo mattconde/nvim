@@ -16,7 +16,8 @@ let s:red      = g:dracula#palette.red[0]
 let s:yellow   = g:dracula#palette.yellow[0]
 
 " Background colors for terminal windows
-exe 'hi NormalNC guibg='.s:bgdark
+exe 'hi NormalNC guibg='.s:bgdark.' guifg='.s:comment
+exe 'hi StatusLineNC guibg='.s:bgdark.' guifg='.s:comment
 
 let g:currentmode={
       \ 'n'   : 'Normal',
@@ -45,7 +46,6 @@ au FileType fern setlocal statusline=%5*\\
 exe 'hi User5 guibg='.s:bg.' guifg='.s:bg
 
 exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
-exe 'hi statuslinenc guibg='.s:bg.' guifg='.s:comment
 exe 'hi User1 guibg='.s:bg.' guifg='.s:comment
 exe 'hi User2 gui=bold'
 exe 'hi User3 gui=bold'
@@ -53,9 +53,9 @@ exe 'hi User3 gui=bold'
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
     exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
-    exe 'hi User1 guibg='.s:purple.' guifg='.s:bgdark
-    exe 'hi User2 gui=bold guibg='.s:purple.' guifg='.s:bgdark
-    exe 'hi User3 gui=bold guibg='.s:purple.' guifg='.s:bgdark
+    exe 'hi User1 guibg='.s:purple.' guifg='.s:bg
+    exe 'hi User2 gui=bold guibg='.s:purple.' guifg='.s:bg
+    exe 'hi User3 gui=bold guibg='.s:purple.' guifg='.s:bg
   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
     exe 'hi statusline guibg='.s:yellow.' guifg='.s:bg
     exe 'hi User1 guibg='.s:yellow.' guifg='.s:bg
