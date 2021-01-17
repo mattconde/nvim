@@ -1,3 +1,8 @@
+" status options
+set lazyredraw
+set laststatus=2
+set noshowmode
+
 " colors
 let s:bg       = g:dracula#palette.bg[0]
 let s:bglight  = g:dracula#palette.bglight[0]
@@ -14,10 +19,6 @@ let s:pink     = g:dracula#palette.pink[0]
 let s:purple   = g:dracula#palette.purple[0]
 let s:red      = g:dracula#palette.red[0]
 let s:yellow   = g:dracula#palette.yellow[0]
-
-" Background colors for terminal windows
-exe 'hi NormalNC guibg='.s:bgdark.' guifg='.s:comment
-exe 'hi StatusLineNC guibg='.s:bgdark.' guifg='.s:comment
 
 let g:currentmode={
       \ 'n'   : 'Normal',
@@ -41,60 +42,72 @@ let g:currentmode={
       \ 't'   : 'Terminal'
       \}
 
-" set local statusline for fern buffers
-au FileType fern setlocal statusline=%5*\\
-exe 'hi User5 guibg='.s:bg.' guifg='.s:bg
+" background colors for terminal windows
+exe 'hi NormalNC guibg='.s:bgdark
 
-exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
-exe 'hi User1 guibg='.s:bg.' guifg='.s:comment
-exe 'hi User2 gui=bold'
-exe 'hi User3 gui=bold'
+" active statusline groups 1-4
+exe 'hi User1 gui=bold guibg='.s:bg.' guifg='.s:fg
+exe 'hi User2 gui=bold guibg='.s:bg.' guifg='.s:fg
+exe 'hi User3 gui=bold guibg='.s:bg.' guifg='.s:fg
+exe 'hi User4 gui=bold guibg='.s:bg.' guifg='.s:fg
+
+" not active statusline groups 5-8
+exe 'hi User5 guibg='.s:bgdark.' guifg='.s:comment
+exe 'hi User6 guibg='.s:bgdark.' guifg='.s:comment
+exe 'hi User7 guibg='.s:bgdark.' guifg='.s:comment
+exe 'hi User8 guibg='.s:bgdark.' guifg='.s:comment
 
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
-    exe 'hi statusline guibg='.s:purple.' guifg='.s:comment
-    exe 'hi User1 guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User2 gui=bold guibg='.s:purple.' guifg='.s:bg
-    exe 'hi User3 gui=bold guibg='.s:purple.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:purple.' guifg='.s:bglight
+    exe 'hi User1 gui=bold guibg='.s:purple.' guifg='.s:bgdarker
+    exe 'hi User2 guibg='.s:purple.' guifg='.s:bglight
+    exe 'hi User3 guibg='.s:purple.' guifg='.s:bglight
+    exe 'hi User4 gui=bold guibg='.s:purple.' guifg='.s:bgdarker
   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
-    exe 'hi statusline guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User1 guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User2 gui=bold guibg='.s:yellow.' guifg='.s:bg
-    exe 'hi User3 gui=bold guibg='.s:yellow.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:yellow.' guifg='.s:bglight
+    exe 'hi User1 gui=bold guibg='.s:yellow.' guifg='.s:bgdarker
+    exe 'hi User2 guibg='.s:yellow.' guifg='.s:bglight
+    exe 'hi User3 guibg='.s:yellow.' guifg='.s:bglight
+    exe 'hi User4 gui=bold guibg='.s:yellow.' guifg='.s:bgdarker
   elseif (mode() ==# 'i')
-    exe 'hi statusline guibg='.s:green.' guifg='.s:bg
-    exe 'hi User1 guibg='.s:green.' guifg='.s:bg
-    exe 'hi User2 gui=bold guibg='.s:green.' guifg='.s:bg
-    exe 'hi User3 gui=bold guibg='.s:green.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:pink.' guifg='.s:bglight
+    exe 'hi User1 gui=bold guibg='.s:pink.' guifg='.s:bgdarker
+    exe 'hi User2 guibg='.s:pink.' guifg='.s:bglight
+    exe 'hi User3 guibg='.s:pink.' guifg='.s:bglight
+    exe 'hi User4 gui=bold guibg='.s:pink.' guifg='.s:bgdarker
   elseif (mode() ==# 'c')
-    exe 'hi statusline guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User1 guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User2 gui=bold guibg='.s:pink.' guifg='.s:bg
-    exe 'hi User3 gui=bold guibg='.s:pink.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:green.' guifg='.s:bglight
+    exe 'hi User1 gui=bold guibg='.s:green.' guifg='.s:bgdarker
+    exe 'hi User2 guibg='.s:green.' guifg='.s:bglight
+    exe 'hi User3 guibg='.s:green.' guifg='.s:bglight
+    exe 'hi User4 gui=bold guibg='.s:green.' guifg='.s:bgdarker
   else
-    exe 'hi statusline guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User1 guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User2 gui=bold guibg='.s:orange.' guifg='.s:bg
-    exe 'hi User3 gui=bold guibg='.s:orange.' guifg='.s:bg
+    exe 'hi statusline guibg='.s:orange.' guifg='.s:bglight
+    exe 'hi User1 gui=bold guibg='.s:orange.' guifg='.s:bgdarker
+    exe 'hi User2 guibg='.s:orange.' guifg='.s:bglight
+    exe 'hi User3 guibg='.s:orange.' guifg='.s:bglight
+    exe 'hi User4 gui=bold guibg='.s:orange.' guifg='.s:bgdarker
   endif
 
   return ''
 endfunction
 
-set lazyredraw
-set laststatus=2
-set noshowmode
-set statusline=
-set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
-set statusline+=%1*\                                     " Space
-set statusline+=%2*\%<%F%m%r%h%w                         " File path, modified, readonly, helpfile, preview
-set statusline+=%1*\ ‹‹                                  " Separator
-set statusline+=%1*\ %Y                                  " Filetype
-set statusline+=%1*\ ››                                  " Separator
-set statusline+=%=                                       " Right Side
-set statusline+=%1*\ ‹‹                                  " Separator
-set statusline+=%1*\ %02v\ %02l/%L                       " Column Line TotalLines
-set statusline+=%1*\ ››                                  " Separator
-set statusline+=%3*\ %{toupper(g:currentmode[mode()])}   " Current mode
-set statusline+=%1*\                                     " Space
+" active
+let s:a_statusline='%{ChangeStatuslineColor()}%1* %<%F%m%r%h%w %2* ‹‹ %Y ›› %= %3* ‹‹ %02v %02l/%L ›› %4* %{toupper(g:currentmode[mode()])} '
+" inactive
+let s:na_statusline='%5* %<%F%m%r%h%w '
 
+" select which statusline to use
+function! GetBufferStatus(w)
+  return a:w==winnr() ? s:a_statusline : s:na_statusline
+endfunction
+
+" set status line
+function! s:RefreshStatus()
+  for i in range(1, winnr('$'))
+    call setwinvar(i, '&statusline', '%!GetBufferStatus(' . i . ')')
+  endfor
+endfunction
+
+autocmd VimEnter,WinEnter,BufWinEnter * call <SID>RefreshStatus()
