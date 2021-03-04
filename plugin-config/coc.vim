@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
   \'coc-eslint',
   \'coc-styled-components',
   \'coc-markdownlint',
-  \'coc-spell-checker',
   \'coc-vimlsp',
   \'coc-rls'
   \]
