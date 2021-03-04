@@ -28,30 +28,6 @@ nnoremap <leader>d :bdelete<CR>
 " toggle file explorer
 nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 
-" search
-nnoremap <C-g> :GFindText<CR>
-
-" search word under cursor
-nnoremap <C-f> :GFindText <C-r><C-w><CR>
-
-" explore files
-nnoremap <C-p> :Files<CR>
-
-" search word under cursor in buffe
-nnoremap <C-s> /<C-r><C-w><CR>
-
-" replace word under cursor in buffer
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
-
-" navigate open buffers
-nnoremap <leader>b :Buffers<CR>
-
-" navigate available commands
-nnoremap <leader>c :Commands<CR>
-
-" navigate changed git files
-nnoremap <leader>g :GFiles?<CR>
-
 " move selected or current lines up and down
 xnoremap <silent> K :call Move_up()<CR>
 xnoremap <silent> J :call Move_down()<CR>

@@ -14,10 +14,11 @@ Plug 'tpope/vim-fugitive'
 " custom start screen
 Plug 'mhinz/vim-startify'
 
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
+" telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " helps find project root
 Plug 'airblade/vim-rooter'
