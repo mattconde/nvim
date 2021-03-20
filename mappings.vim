@@ -8,10 +8,6 @@ inoremap jk <Esc>
 " avoid unintentional switches to Ex mode.
 nnoremap Q <nop>
 
-nnoremap <leader>q :q<CR>
-
-nnoremap <leader>w :w<CR>
-
 " un-highlight after a search
 nnoremap <leader>a :set nohlsearch<CR>
 
