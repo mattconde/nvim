@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+" lsp
+Plug 'neovim/nvim-lspconfig'
+
 " theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -22,9 +25,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " helps find project root
 Plug 'airblade/vim-rooter'
-
-" intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " editorconfig support
 Plug 'editorconfig/editorconfig-vim'
