@@ -18,9 +18,6 @@ vnoremap X "_d
 vnoremap x "_d
 nnoremap x "_d
 
-" delete current buffer
-nnoremap <leader>d :bdelete<CR>
-
 " toggle file explorer
 nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 
