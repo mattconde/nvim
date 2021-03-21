@@ -29,10 +29,10 @@ xnoremap <silent> K :call Move_up()<CR>
 xnoremap <silent> J :call Move_down()<CR>
 
 " better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " better splits
 nnoremap <leader>h :vsplit<CR>
