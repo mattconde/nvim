@@ -27,14 +27,3 @@ function! Move_down() abort range
   call s:Move("'>+1", l:at_bottom)
 endfunction
 
-" use rg to search for text strings in project
-command! -bang -nargs=* FindText
-  \ call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --no-ignore --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
-  \ fzf#vim#with_preview(),
-  \ <bang>0)
-
-" use rg to search for text strings in project whilst respecting git ignore
-command! -bang -nargs=* GFindText
-  \ call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!*.lock" --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1,
-  \ fzf#vim#with_preview(),
-  \ <bang>0)
