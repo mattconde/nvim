@@ -1,16 +1,12 @@
 source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/settings.vim
 
 luafile $HOME/.config/nvim/lua/init.lua
 
-source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/plugin-config/lsp.vim
-source $HOME/.config/nvim/plugin-config/telescope.vim
 source $HOME/.config/nvim/plugin-config/fern.vim
 source $HOME/.config/nvim/plugin-config/start-screen.vim
-
-luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " theme
 let g:dracula_italic=0

@@ -37,15 +37,42 @@ nnoremap <leader>j :split<CR>
 nnoremap <leader>k :split<CR>
 nnoremap <leader>l :vsplit<CR>
 
-" disable arrows in most modes
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
+" telescope
 
-" disable arrows in insert mode
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+" explore files
+nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 
+nnoremap <leader>p <cmd>lua require('telescope.builtin').find_files()<CR>
+
+" search
+nnoremap <C-g> <cmd>lua require('telescope.builtin').live_grep()<CR>
+
+" search word under cursor
+nnoremap <C-f> <cmd>lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+
+" search word under cursor in buffer
+nnoremap <C-s> /<C-r><C-w><CR>
+
+" navigate open buffers
+nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
+
+" help
+nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<CR>
+
+" explore files from nvim config in projects
+nnoremap <leader>vrc <cmd>lua require('plugin-config.telescope').search_nvim_config()<CR>
+
+" compe
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR> compe#confirm('<CR>')
+
+" lsp
+nnoremap <silent> ga <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+
+nnoremap <silent> <leader>= <cmd>lua vim.lsp.buf.formatting()<CR>

@@ -7,7 +7,7 @@ set belloff=all                                                   " never ring t
 set cmdheight=2                                                   " More space for displaying messages
 set clipboard=unnamedplus                                         " Copy paste between vim and everything else
 set colorcolumn=80                                                " Set highlighted column
-set completeopt=menuone,noinsert,noselect                         " Disable auto insert when using nvim lsp
+set completeopt=menuone,noselect                                  " Disable auto insert when using nvim lsp
 set conceallevel=0                                                " So that I can see `` in markdown files
 set cursorline                                                    " Enable highlighting of the current line
 set encoding=utf-8                                                " The encoding displayed 

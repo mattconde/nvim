@@ -11,10 +11,13 @@ require('telescope').setup {
     qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
 
     mappings = {
+      n = {
+        ["<esc>"] = actions.close,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous
+      },
       i = {
         ["<esc>"] = actions.close,
-        ["<C-p>"] = actions.close, -- defaults to selection previous
-        ["<C-n>"] = false, --defaults to selection next
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous
       },
