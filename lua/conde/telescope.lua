@@ -12,7 +12,11 @@ require('telescope').setup {
 
     mappings = {
       i = {
-        ["<esc>"] = actions.close
+        ["<esc>"] = actions.close,
+        ["<C-p>"] = actions.close, -- defaults to selection previous
+        ["<C-n>"] = false, --defaults to selection next
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous
       },
     }
   },
