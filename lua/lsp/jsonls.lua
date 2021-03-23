@@ -1,3 +1,6 @@
 -- npm install -g vscode-json-languageserver
-require'lspconfig'.jsonls.setup{}
+
+local on_attach = require'completion'.on_attach
+
+require'lspconfig'.jsonls.setup{ on_attach=on_attach }
 

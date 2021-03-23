@@ -1,3 +1,6 @@
 -- npm install -g vim-language-server
-require'lspconfig'.vimls.setup{}
+
+local on_attach = require'completion'.on_attach
+
+require'lspconfig'.vimls.setup{ on_attach=on_attach }
 

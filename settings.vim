@@ -7,7 +7,6 @@ set belloff=all                                                   " never ring t
 set cmdheight=2                                                   " More space for displaying messages
 set clipboard=unnamedplus                                         " Copy paste between vim and everything else
 set colorcolumn=80                                                " Set highlighted column
-set completeopt=menuone,noselect                                  " Disable auto insert when using nvim lsp
 set conceallevel=0                                                " So that I can see `` in markdown files
 set cursorline                                                    " Enable highlighting of the current line
 set encoding=utf-8                                                " The encoding displayed 
@@ -44,7 +43,6 @@ set shiftwidth=2                                                  " Change the n
 set smarttab                                                      " Makes tabbing smarter will realize you have 2 vs 4
 set smartindent                                                   " Makes indenting smart
 set showtabline=0                                                 " Disable tabline at the top
-set shortmess+=c                                                  " Don't pass messages to ins-completion-menu
 set signcolumn=yes                                                " Always show the signcolumn, otherwise it would shift the text each time
 set t_Co=256                                                      " Support 256 colors
 set tabstop=2 softtabstop=2                                       " Insert 2 spaces for a tab

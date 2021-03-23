@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'neovim/nvim-lspconfig'
 
 " auto-complete
-Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-lua/completion-nvim'
 
 " theme
 Plug 'dracula/vim', { 'as': 'dracula' }
