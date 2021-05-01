@@ -62,6 +62,10 @@ nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<CR>
 " explore files from nvim config in projects
 nnoremap <leader>vrc <cmd>lua require('plugin-config.telescope').search_nvim_config()<CR>
 
+" compe
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR> compe#confirm('<CR>')
+
 " lsp
 nnoremap <silent> ga <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>

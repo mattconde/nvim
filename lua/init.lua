@@ -10,4 +10,4 @@ require('lsp/vimls')
 
 require('plugin-config/telescope')
 require('plugin-config/colorizer')
-
+require('plugin-config/nvim-compe')

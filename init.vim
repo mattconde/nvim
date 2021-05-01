@@ -7,7 +7,6 @@ source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/plugin-config/fern.vim
 source $HOME/.config/nvim/plugin-config/start-screen.vim
-source $HOME/.config/nvim/plugin-config/completion.vim
 
 " theme
 let g:dracula_italic=0
