@@ -1,5 +1,5 @@
 require'compe'.setup {
-  enabled = true;
+  enabled = { ignored_filetypes = {'TelescopePrompt'} };
   autocomplete = true;
   debug = false;
   min_length = 1;
