@@ -31,7 +31,7 @@ vim.o.writebackup = false
 vim.o.belloff = "all"
 -- undo
 vim.o.undofile = true
-vim.o.undodir = "~/.config/nvim/undodir"
+vim.o.undodir = "/Users/gbmajaco/.config/nvim/undodir"
 -- buffer
 vim.o.hidden = true
 -- indent / tab
