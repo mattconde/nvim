@@ -44,6 +44,9 @@ Plug 'styled-components/vim-styled-components'
 " graphql support
 Plug 'jparise/vim-graphql'
 
+" Visual LSP symbols
+Plug 'simrat39/symbols-outline.nvim'
+
 call plug#end()
 
 " automatically install missing plugins on startup
