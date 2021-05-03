@@ -3,7 +3,7 @@ local function buf_option(...)
 end
 
 local function on_attach(client)
-  -- buf_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+  -- one day...
 end
 
 return on_attach
