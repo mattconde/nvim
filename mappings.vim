@@ -9,7 +9,7 @@ inoremap jk <Esc>
 nnoremap Q <nop>
 
 " un-highlight after a search
-nnoremap <leader>a :set nohlsearch<CR>
+nnoremap <leader>a <cmd>set nohlsearch<CR>
 
 " make X behave like d without adding removed data to a register
 nnoremap X "_d
@@ -19,11 +19,11 @@ vnoremap x "_d
 nnoremap x "_d
 
 " toggle file explorer
-nnoremap <leader>e :Fern . -drawer -reveal=% -toggle<CR>
+nnoremap <leader>e <cmd>Fern . -drawer -reveal=% -toggle<CR>
 
 " move selected or current lines up and down
-xnoremap <silent> K :call Move_up()<CR>
-xnoremap <silent> J :call Move_down()<CR>
+xnoremap <silent> K <cmd>call Move_up()<CR>
+xnoremap <silent> J <cmd>call Move_down()<CR>
 
 " better window navigation
 nnoremap <A-h> <C-w>h
@@ -32,10 +32,10 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 " better splits
-nnoremap <leader>h :vsplit<CR>
-nnoremap <leader>j :split<CR>
-nnoremap <leader>k :split<CR>
-nnoremap <leader>l :vsplit<CR>
+nnoremap <leader>h <cmd>vsplit<CR>
+nnoremap <leader>j <cmd>split<CR>
+nnoremap <leader>k <cmd>split<CR>
+nnoremap <leader>l <cmd>vsplit<CR>
 
 " telescope
 
@@ -61,6 +61,9 @@ nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<CR>
 
 " explore files from nvim config in projects
 nnoremap <leader>vrc <cmd>lua require('plugin-config.telescope').search_nvim_config()<CR>
+
+" explore language server symbols
+nnoremap <leader>s <cmd>SymbolsOutline<CR>
 
 " compe
 inoremap <silent><expr> <C-Space> compe#complete()
