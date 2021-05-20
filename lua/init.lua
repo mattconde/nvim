@@ -10,6 +10,7 @@ require('lsp/jsonls')
 require('lsp/vimls')
 require('lsp/lua')
 
+require('plugin-config/nvim-treesitter')
 require('plugin-config/telescope')
 require('plugin-config/colorizer')
 require('plugin-config/nvim-compe')

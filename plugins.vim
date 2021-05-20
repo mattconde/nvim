@@ -3,6 +3,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " lsp
 Plug 'neovim/nvim-lspconfig'
 
+" Treesitter!
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " auto-complete
 Plug 'hrsh7th/nvim-compe'
 
