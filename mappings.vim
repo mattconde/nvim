@@ -26,10 +26,10 @@ xnoremap <silent> K <cmd>call Move_up()<CR>
 xnoremap <silent> J <cmd>call Move_down()<CR>
 
 " better window navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+nnoremap <Left> <C-w>h
+nnoremap <Down> <C-w>j
+nnoremap <Up> <C-w>k
+nnoremap <Right> <C-w>l
 
 " better splits
 nnoremap <leader>h <cmd>vsplit<CR>

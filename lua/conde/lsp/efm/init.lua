@@ -1,7 +1,7 @@
 local lsp_config = require('lspconfig')
-local eslint = require('lsp.efm.eslint')
-local prettier = require('lsp.efm.prettier')
-local on_attach = require('lsp.on_attach')
+local eslint = require('conde.lsp.efm.eslint')
+local prettier = require('conde.lsp.efm.prettier')
+local on_attach = require('conde.lsp.on_attach')
 
 local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm/config.yaml'
 local efm_log_dir = '/tmp/'
