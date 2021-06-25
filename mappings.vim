@@ -53,6 +53,18 @@ nnoremap <C-f> <cmd>lua require('telescope.builtin').grep_string { search = vim.
 " search word under cursor in buffer
 nnoremap <C-s> /<C-r><C-w><CR>
 
+" browse git branches
+nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<CR>
+
+" browse git commits
+nnoremap <leader>gc <cmd>lua require('telescope.builtin').git_commits()<CR>
+
+" browse git status
+nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<CR>
+
+" browse git pull requests
+nnoremap <leader>gp <cmd>lua require('telescope').extensions.gh.pull_request()<CR>
+
 " navigate open buffers
 nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
 
