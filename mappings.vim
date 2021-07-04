@@ -42,10 +42,10 @@ nnoremap <leader>l <cmd>vsplit<CR>
 " explore files
 nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 
-nnoremap <leader>p <cmd>lua require('telescope.builtin').find_files()<CR>
+nnoremap <C-o> <cmd>lua require('conde.plugin-config.telescope').file_browser()<CR>
 
-" search
-nnoremap <C-g> <cmd>lua require('telescope.builtin').live_grep()<CR>
+" search - live_grep
+nnoremap <C-g> <cmd>lua require('telescope.builtin').grep_string()<CR>
 
 " search word under cursor
 nnoremap <C-f> <cmd>lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
@@ -65,14 +65,8 @@ nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<CR>
 " browse git pull requests
 nnoremap <leader>gp <cmd>lua require('telescope').extensions.gh.pull_request()<CR>
 
-" navigate open buffers
-nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<CR>
-
 " help
 nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<CR>
-
-" explore files from nvim config in projects
-nnoremap <leader>vrc <cmd>lua require('plugin-config.telescope').search_nvim_config()<CR>
 
 " explore language server symbols
 nnoremap <leader>s <cmd>SymbolsOutline<CR>
