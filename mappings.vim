@@ -42,13 +42,13 @@ nnoremap <leader>l <cmd>vsplit<CR>
 " explore files
 nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 
-nnoremap <C-o> <cmd>lua require('conde.plugin-config.telescope').file_browser()<CR>
+nnoremap <C-e> <cmd>lua require('conde.plugin-config.telescope').file_browser()<CR>
 
 " search - live_grep
-nnoremap <C-g> <cmd>lua require('telescope.builtin').grep_string()<CR>
+nnoremap <C-g> <cmd>lua require('telescope.builtin').live_grep { only_sort_text = true, search = '' }<CR>
 
 " search word under cursor
-nnoremap <C-f> <cmd>lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+nnoremap <C-f> <cmd>lua require('telescope.builtin').grep_string { only_sort_text = true, search = vim.fn.expand("<cword>") }<CR>
 
 " search word under cursor in buffer
 nnoremap <C-s> /<C-r><C-w><CR>
